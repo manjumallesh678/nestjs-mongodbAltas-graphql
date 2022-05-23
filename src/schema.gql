@@ -1,0 +1,47 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ItemType {
+  id: ID!
+  title: String!
+  price: Int!
+  description: String!
+}
+
+type User {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Query {
+  items: [ItemType!]!
+  hello: String!
+  user(id: Int!): User!
+}
+
+type Mutation {
+  createItem(input: ItemInput!): ItemType!
+  updateItem(id: String!, input: ItemInput!): ItemType!
+  deleteItem(id: String!): ItemType!
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+}
+
+input ItemInput {
+  title: String!
+  price: Int!
+  description: String!
+}
+
+input CreateUserInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateUserInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
